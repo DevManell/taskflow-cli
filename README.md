@@ -51,10 +51,10 @@ O TaskFlow CLI oferece uma forma prática de gerenciar tarefas diretamente pelo 
 Para executar o projeto, siga os passos abaixo:
 
 ### 1. Clonar o repositório
-<bash>
+
 git clone https://github.com/DevManell/taskflow-cli
-cd taskflow-cli 
-</bash>
+cd taskflow-cli
+
 ### 2. Instalar as dependências
 python -m pip install -r requirements.txt
 
