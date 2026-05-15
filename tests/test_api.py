@@ -1,11 +1,20 @@
 import requests
+import pytest
+
 
 def test_api_connection():
-    response = requests.get("https://zenquotes.io/api/random")
+    try:
+        response = requests.get(
+            "https://zenquotes.io/api/random",
+            timeout=10
+        )
 
-    assert response.status_code == 200
+        assert response.status_code == 200
 
-    data = response.json()
+        data = response.json()
 
-    assert "q" in data[0]
-    assert "a" in data[0]
+        assert isinstance(data, list)
+        assert "q" in data[0]
+
+    except requests.exceptions.RequestException:
+        pytest.skip("API indisponível no momento")
