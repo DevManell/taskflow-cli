@@ -66,3 +66,54 @@ python run.py
 Abaixo um exemplo do sistema em funcionamento:
 
 ![Execução do sistema](img/Captura%20de%20tela%202026-04-10%20191013.png)
+
+---
+
+## 📈 Atualizações da Entrega Intermediária
+
+Nesta nova etapa do projeto foram adicionadas melhorias importantes para tornar o sistema mais completo e profissional.
+
+### ✨ Novidades
+
+- Integração com API pública
+- Exibição de frases motivacionais
+- Testes de integração com Pytest
+- Workflow automatizado com GitHub Actions
+- Melhor organização do projeto
+- Validação automática a cada push no GitHub
+
+---
+
+## 🌐 API Pública Utilizada
+
+O sistema agora utiliza a API pública ZenQuotes para exibir mensagens motivacionais diretamente no terminal.
+
+https://zenquotes.io/
+
+---
+
+## 🖼️ Nova Versão do Sistema
+
+Exemplo da nova funcionalidade de frases motivacionais:
+
+![Nova versão do sistema](img/Captura%20de%20tela%202026-05-15%20195056.png)
+
+---
+
+## 🧪 Testes Automatizados
+
+Para executar os testes do projeto:
+
+```bash
+python -m pytest
+```
+
+---
+
+## 🔄 Integração Contínua
+
+O projeto utiliza GitHub Actions para executar automaticamente:
+
+- Testes automatizados
+- Verificação das dependências
+- Validação do sistema em ambiente Linux
