@@ -1,6 +1,6 @@
 import json
 import os
-
+import requests
 FILE = "tasks.json"
 
 def load_tasks():
@@ -29,8 +29,23 @@ def remove_task(index):
         raise IndexError("Índice inválido")
     tasks.pop(index)
     save_tasks(tasks)
+def get_motivational_quote():
+    try:
+        response = requests.get("https://zenquotes.io/api/random")
+
+        if response.status_code == 200:
+            data = response.json()
+            return data["content"]
+        else:
+            return "Não foi possível carregar a frase."
+
+    except Exception:
+        return "Erro ao conectar com a API."    
 
 def main():
+    quote = get_motivational_quote()
+    print(f"\n✨ Frase motivacional:\n{quote}\n")
+
     while True:
         print("\n1. Adicionar tarefa")
         print("2. Listar tarefas")
